@@ -1,0 +1,123 @@
+@import './interaction-base.css';
+
+.polaroid-int-full-disperse {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* 拍立得1 - 左上斜放，整体一起转 */
+.polaroid-int-p1 {
+  position: absolute;
+  left: -32px;
+  top: 139px;
+  width: 229px;
+  height: 305px;
+  transform: rotate(-8.52deg);
+  cursor: pointer;
+  z-index: 15;
+}
+
+.polaroid-int-p1-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 229px;
+  height: 305px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.polaroid-int-p1-base {
+  position: absolute;
+  left: 20px;
+  top: 41px;
+  width: 189px;
+  height: 197px;
+  background-color: #337987;
+}
+
+/* 拍立得2 - 右下斜放，整体一起转 */
+.polaroid-int-p2 {
+  position: absolute;
+  left: 174px;
+  top: 446px;
+  width: 229px;
+  height: 305px;
+  transform: rotate(17.65deg);
+  cursor: pointer;
+  z-index: 15;
+}
+
+.polaroid-int-p2-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 229px;
+  height: 305px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.polaroid-int-p2-base {
+  position: absolute;
+  left: 20px;
+  top: 41px;
+  width: 189px;
+  height: 197px;
+  background-color: #337987;
+}
+
+/* 便签装饰 */
+.polaroid-int-note1 {
+  position: absolute;
+  left: 41px;
+  top: 503px;
+  width: 124px;
+  height: 124px;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 16;
+}
+
+.polaroid-int-note2 {
+  position: absolute;
+  left: 208px;
+  top: 251px;
+  width: 121px;
+  height: 121px;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 16;
+}
+
+/* 贴纸固定位置矩形 */
+.polaroid-int-sticker-box1 {
+  position: absolute;
+  left: 195px;
+  top: 139px;
+  width: 90px;
+  height: 90px;
+  border: 1px solid #000000;
+  background-color: #d9d9d9;
+  transform: rotate(-8.52deg);
+  z-index: 14;
+  pointer-events: none;
+}
+
+.polaroid-int-sticker-box2 {
+  position: absolute;
+  left: 45px;
+  top: 660px;
+  width: 90px;
+  height: 90px;
+  border: 1px solid #000000;
+  background-color: #d9d9d9;
+  transform: rotate(12deg);
+  z-index: 14;
+  pointer-events: none;
+}

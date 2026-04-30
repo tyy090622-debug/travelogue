@@ -1,0 +1,155 @@
+@import './interaction-base.css';
+
+/* 小票容器 - 缩小放右下角 */
+.receipt-int-wrap {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 258px;
+  height: 551px;
+  z-index: 12;
+}
+
+.receipt-int-img {
+  position: absolute;
+  left: 61px;
+  top: 0;
+  width: 189px;
+  height: 527px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* 表头 */
+.receipt-int-header {
+  position: absolute;
+  left: 70px;
+  top: 12px;
+  width: 170px;
+  font-family: 'ZhaohuaMinA', serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  line-height: normal;
+  pointer-events: none;
+}
+.receipt-int-title { color: #000000; }
+.receipt-int-sub { font-size: 8px; }
+.receipt-int-sep { font-size: 8px; color: #000; }
+.receipt-int-no { color: #000000; }
+
+/* 商品列表 - 中间动态区 */
+.receipt-int-table {
+  position: absolute;
+  left: 70px;
+  top: 95px;
+  width: 170px;
+  font-family: 'ZhaohuaMinA', serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000000;
+  line-height: normal;
+  pointer-events: none;
+}
+
+.receipt-int-item-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+.receipt-int-item { color: #000; }
+.receipt-int-price { color: #000; }
+.receipt-int-sep2 { font-size: 8px; color: #000; }
+.receipt-int-total { font-size: 12px; color: #000; }
+
+/* 底部固定信息 */
+.receipt-int-footer {
+  position: absolute;
+  left: 70px;
+  bottom: 60px;
+  width: 170px;
+  font-family: 'ZhaohuaMinA', serif;
+  font-size: 8px;
+  color: #000000;
+  line-height: 14px;
+  pointer-events: none;
+}
+
+/* 条码 */
+.receipt-int-barcode {
+  position: absolute;
+  left: 70px;
+  bottom: 15px;
+  width: 170px;
+  font-family: 'Libre Barcode 39 Extended Text', monospace;
+  font-size: 22px;
+  color: #000000;
+  line-height: normal;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* ====== 贴纸翻页卡片 ====== */
+.sticker-card {
+  position: absolute;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+  transform: rotate(var(--rotate, 0deg));
+}
+
+/* 正面：降低饱和度 */
+.sticker-front {
+  display: block;
+  max-width: 120px;  /* 限制最大宽度，防止图片太大占满屏幕，数值可按需调整 */
+  max-height: 120px; /* 限制最大高度，防止细长条的票据过长 */
+  width: auto;
+  height: auto;
+  object-fit: contain; /* 保证原图完整展现，绝不裁切 */
+  filter: saturate(0.3) contrast(0.85);
+  transition: filter 0.3s ease;
+  backface-visibility: hidden;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* 背面：白色底 + 文字 */
+.sticker-back {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'ZhaohuaMinA', serif;
+  font-size: 10px;
+  color: #333333;
+  text-align: center;
+  padding: 4px;
+  line-height: 14px;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  pointer-events: none;
+}
+
+/* 翻面：容器旋转，无放大 */
+.sticker-card.flipped {
+  transform: rotateY(180deg) rotate(var(--rotate, 0deg));
+}
+
+/* 选中：放大 */
+.sticker-card.selected {
+  transform: scale(1.12) rotate(var(--rotate, 0deg));
+}
+
+/* 翻面+选中：保持翻转，但不放大 */
+.sticker-card.flipped.selected {
+  transform: rotateY(180deg) rotate(var(--rotate, 0deg));
+}
+
+.sticker-card.selected .sticker-front {
+  filter: drop-shadow(0 4px 10px rgba(51,121,135,0.7)) brightness(1.05) saturate(1) contrast(1);
+}

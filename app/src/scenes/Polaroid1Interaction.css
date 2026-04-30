@@ -1,0 +1,72 @@
+@import './interaction-base.css';
+
+.polaroid1-int {
+  position: absolute;
+  left: 0;
+  top: 64px;
+  width: 229px;
+  height: 305px;
+  z-index: 12;
+}
+
+.polaroid1-int-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 229px;
+  height: 305px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.polaroid1-int-base {
+  position: absolute;
+  left: 20px;
+  top: 41px;
+  width: 189px;
+  height: 197px;
+  background-color: #337987;
+}
+
+.num-text {
+  color: #337987;
+}
+
+/* 文字框背景 */
+.polaroid1-int-text-bg {
+  position: absolute;
+  left: 21px;
+  top: 363px;
+  width: 343px;
+  height: 455px;
+  background: rgba(217, 217, 217, 0.25);
+  z-index: 12;
+}
+
+/* 标题 */
+.polaroid1-int-text {
+  position: absolute;
+  left: 82px;
+  top: 20px;
+  width: 274px;
+  font-family: 'ZhaohuaMinA', serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 67px;
+  color: #000000;
+  z-index: 13;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.polaroid1-int-text-main { color: #000000; }
+
+.polaroid1-int-text-num {
+  color: #337987;
+}
+
+.int-table,
+.int-disperse,
+.int-white-paper { display: none; }

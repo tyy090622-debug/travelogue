@@ -1,0 +1,399 @@
+/* ========== 字体 ========== */
+@font-face {
+  font-family: 'ZhaohuaMinA';
+  src: url('/fonts/朝华标题_猫啃网/朝华标题/朝華標題A.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Libre Barcode 39 Extended Text';
+  src: url('/fonts/Libre_Barcode_39_Extended_Text/LibreBarcode39ExtendedText-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 全局重置 */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== 主容器 ========== */
+.scene2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* ========== 画布 (v1_2) ========== */
+.scene2__canvas {
+  position: relative;
+  width: 393px;
+  height: 852px;
+  overflow: visible;
+  background: rgba(255, 255, 255, 1);
+  flex-shrink: 0;
+  transform: none !important;
+}
+
+/* ========== 背景图 (v2_2) ========== */
+.scene2__bg {
+  width: 393px;
+  height: 869px;
+  background: url("/images/v2_2.png") no-repeat center center / cover;
+  position: absolute;
+  top: 17px;
+  left: 0px;
+  overflow: hidden;
+}
+
+/* ========== 桌布 (v2_3) ========== */
+.scene2__tablecloth {
+  width: 393px;
+  height: 699px;
+  background: url("/images/v2_3.png") no-repeat center center / cover;
+  position: absolute;
+  top: 81px;
+  left: 0px;
+  overflow: hidden;
+}
+
+/* ========== 机票容器 (v2_4) ========== */
+.scene2__ticket-wrap {
+  width: 342px;
+  height: 256px;
+  position: absolute;
+  top: 92px;
+  left: 25px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* 机票底图 (v2_5) - 和父容器同尺寸重叠，用背景图兜底 */
+.scene2__ticket-bg {
+  width: 342px;
+  height: 256px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: url("/images/v2_5.png") no-repeat center center / cover;
+}
+
+/* 机票左侧文字 (v2_6) */
+.ticket-text {
+  position: absolute;
+  width: 120px;
+  color: transparent;
+  top: 99px;
+  left: 20px;
+  font-family: 'ZhaohuaMinA', serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0;
+  pointer-events: none;
+}
+
+.ticket-route-text { color: #000000; }
+.ticket-divider-text { color: #000000; font-size: 8px; }
+.ticket-info-text { color: #000000; font-size: 8px; }
+.ticket-value-text { color: #337987; font-size: 8px; }
+
+/* 机票右侧条码 (v2_7) */
+.ticket-barcode {
+  position: absolute;
+  width: 74px;
+  color: #000000;
+  top: 99px;
+  left: 175px;
+  font-family: 'Libre Barcode 39 Extended Text', monospace;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  pointer-events: none;
+}
+
+/* ========== 小票 (v2_9) ========== */
+.scene2__receipt {
+  width: 159px;
+  height: 373px;
+  position: absolute;
+  top: 291px;
+  left: 175px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* 小票底图 (v2_14) */
+.scene2__receipt-bg {
+  width: 128px;
+  height: 373px;
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  background: url("/images/v2_14.png") no-repeat center center / cover;
+}
+
+/* 小票条码 (v2_15) */
+.receipt-barcode {
+  position: absolute;
+  width: 155px;
+  color: #000000;
+  top: 293px;
+  left: 0px;
+  font-family: 'Libre Barcode 39 Extended Text', monospace;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2.4px;
+  line-height: normal;
+  text-align: right;
+  pointer-events: none;
+}
+
+/* 小票表头 (v2_11) */
+.receipt-header-text {
+  position: absolute;
+  width: 132px;
+  color: #000000;
+  top: 8px;
+  left:37px;
+  font-family: 'ZhaohuaMinA', serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  pointer-events: none;
+}
+
+.receipt-title { color: #000000; font-size: 20px; }
+.receipt-sub { color: #000000; font-size: 8px; }
+.receipt-sep { color: #000000; font-size: 8px; }
+.receipt-no { color: #000000; font-size: 8px; }
+
+/* 小票表格 (v2_12) */
+.receipt-table {
+  position: absolute;
+  width: 105px;
+  color: #000000;
+  top: 66px;
+  left: 50px;
+  font-family: 'ZhaohuaMinA', serif;
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: right;
+  pointer-events: none;
+}
+
+.receipt-item-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.receipt-item-name {
+  letter-spacing: 0;
+  font-size: 8px;
+  max-width: 65px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+.receipt-item-price {
+  letter-spacing: 0;
+  font-size: 8px;
+  flex-shrink: 0;
+  text-align: right;
+}
+.receipt-sep2 { letter-spacing: 0.06px; }
+.receipt-total { font-size: 10px; letter-spacing: 0.1px; }
+.receipt-date { font-size: 5px; letter-spacing: 0.03px; }
+
+/* ========== 拍立得1 (v2_19) ========== */
+.scene2__polaroid-1 {
+  width: 229px;
+  height: 305px;
+  position: absolute;
+  top: 256px;
+  left: 7px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.polaroid-1-base {
+  width: 189px;
+  height: 197px;
+  background-color: #337987;
+  position: absolute;
+  top: 41px;
+  left: 15px;
+  overflow: hidden;
+}
+
+.polaroid-1-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.polaroid-1-frame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: -10px;
+  background: url("/images/v2_21.png") no-repeat center center / cover;
+}
+
+/* ========== 拍立得2 (v2_23) ========== */
+.scene2__polaroid-2 {
+  width: 229px;
+  height: 305px;
+  position: absolute;
+  top: 430px;
+  left: 7px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.polaroid-2-base {
+  width: 189px;
+  height: 197px;
+  background-color: #337987;
+  position: absolute;
+  top: 41px;
+  left: 15px;
+  overflow: hidden;
+}
+
+.polaroid-2-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.polaroid-2-frame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: -10px;
+  background: url("/images/v2_25.png") no-repeat center center / cover;
+}
+
+/* ========== 铅笔 (v2_17) ========== */
+.scene2__pencil {
+  width: 25px;
+  height: 395px;
+  background: url("/images/v2_17.png") no-repeat center center / cover;
+  position: absolute;
+  top: 280px;
+  left: 349px;
+  overflow: hidden;
+}
+
+/* ========== 退散背景图 ========== */
+.scene2__disperse-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 393px;
+  height: 852px;
+  object-fit: fill;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.scene2__disperse-bg--visible {
+  opacity: 1;
+}
+
+/* ========== 退散物品层 ========== */
+.scene2__item-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 393px;
+  height: 852px;
+  z-index: 60;
+  pointer-events: none;
+}
+
+.scene2__item-layer--active {
+  pointer-events: auto;
+}
+
+.scene2__item {
+  position: absolute;
+  cursor: pointer;
+  transition:
+    top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.5s ease;
+}
+
+.item--ticket {
+  left: 25px;
+  top: 92px;
+  width: 342px;
+  height: 256px;
+}
+.item--ticket.dispersing { top: -300px; opacity: 0; }
+.item--ticket.active { top: 426px; left: 196px; transform: translate(-50%, -50%); }
+
+.item--polaroids {
+  left: 7px;
+  top: 256px;
+  width: 229px;
+  height: 305px;
+}
+.item--polaroids.dispersing { left: -400px; opacity: 0; }
+.item--polaroids.active { top: 426px; left: 80px; transform: translate(-50%, -50%); }
+
+.item--receipt {
+  left: 175px;
+  top: 291px;
+  width: 159px;
+  height: 373px;
+}
+.item--receipt.dispersing { opacity: 0; }
+.item--receipt.active { top: 426px; left: 196px; transform: translate(-50%, -50%); }
+
+/* ========== 贴纸视图 ========== */
+.scene2__sticker-view {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 393px;
+  height: 852px;
+  z-index: 70;
+  overflow: hidden;
+}
+
+.scene2__sticker-close {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-family: 'ZhaohuaMinA', serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 4px;
+  z-index: 80;
+}

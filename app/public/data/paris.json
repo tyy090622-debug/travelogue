@@ -1,0 +1,80 @@
+{
+  "name": "巴黎",
+  "currency": "€",
+  "currencySymbol": "€",
+  "date": "2026/03/22",
+  "flight": {
+    "destination": "巴黎",
+    "flightNo": "2026",
+    "seat": "30",
+    "time": "17:00",
+    "gate": "BC44"
+  },
+  "receipt": {
+    "header": "收银单",
+    "subheader": "·invoice·",
+    "no": "NO.1",
+    "date": "2026/03/22",
+    "code1": "B006309023",
+    "code2": "SRPQ00440315skyc",
+    "barcode": "EXAMPLE"
+  },
+  "stickers": [
+    {
+      "id": 1,
+      "name": "Croissant au beurre 黄油可颂",
+      "price": 2.80,
+      "description": "街角面包店的纸袋，油渍把店名晕开了一半",
+      "image": "1.png"
+    },
+    {
+      "id": 2,
+      "name": "Ticket Métro — Ligne 4 地铁票 4号线",
+      "price": 2.15,
+      "description": "Métro线路图印在背面，折过一次，不知道为什么没扔",
+      "image": "2.png"
+    },
+    {
+      "id": 3,
+      "name": "L'Étranger — édition de poche 局外人 平装版",
+      "price": 7.50,
+      "description": "前任读者在第47页折了角，不知道他们读到那里的时候在想什么",
+      "image": "3.png"
+    },
+    {
+      "id": 4,
+      "name": "Échantillon parfum — sans nom 香水小样 无名款",
+      "price": 0.00,
+      "description": "没有标签，味道介于某种花和某种木头之间，带回去之后大概也不会买",
+      "image": "4.png"
+    },
+    {
+      "id": 5,
+      "name": "Montre de poche, chaîne manquante 怀表 断链",
+      "price": 12.00,
+      "description": "表盘还在走，但对不上任何时区",
+      "image": "5.png"
+    },
+    {
+      "id": 6,
+      "name": "Pansements adhésifs × 6 创可贴 6片装",
+      "price": 3.40,
+      "description": "买了一整盒，用了一片",
+      "image": "6.png"
+    },
+    {
+      "id": 7,
+      "name": "Eau minérale + article inconnu 矿泉水 + 不明物品",
+      "price": 4.20,
+      "description": "水，和一个翻译软件也没认出来的东西",
+      "image": "7.png"
+    }
+  ],
+  "polaroid": {
+    "ocPlaceholder": "[OC名字]",
+    "locationPlaceholder": "[地名]",
+    "expenditurePlaceholder": "[支出类目]",
+    "itemPlaceholder": "[小物]",
+    "itemNamePlaceholder": "[小物名]"
+  }
+}

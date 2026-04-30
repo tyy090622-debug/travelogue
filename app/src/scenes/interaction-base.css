@@ -1,0 +1,113 @@
+/* ========== 所有交互页通用基础样式 ========== */
+.interaction-page {
+  position: relative;
+  width: 393px;
+  height: 852px;
+  overflow: hidden;
+  background: #ffffff;
+  flex-shrink: 0;
+  transform: none !important;
+}
+
+.int-bg {
+  position: absolute;
+  width: 393px;
+  height: 852px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.int-table {
+  position: absolute;
+  width: 392px;
+  height: 699px;
+  top: 81px;
+  left: 0px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.int-disperse {
+  position: absolute;
+  width: 393px;
+  height: 852px;
+  top: 0;
+  left: 0;
+  object-fit: fill;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.int-white-paper {
+  position: absolute;
+  width: 320px;
+  height: 569px;
+  top: 156px;
+  left: 1px;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ========== 便签通用 ========== */
+.int-note {
+  position: absolute;
+  width: 192px;
+  height: 524px;
+  bottom: 0;
+  right: 0;
+  z-index: 15;
+}
+
+.int-note-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.int-note-text {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'ZhaohuaMinA', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  pointer-events: none;
+}
+
+/* ========== 返回按钮 ========== */
+.int-back {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  width: 80px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.int-back-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.7;
+}
+
+.int-back-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'ZhaohuaMinA', serif;
+  font-size: 14px;
+  color: #fff;
+}

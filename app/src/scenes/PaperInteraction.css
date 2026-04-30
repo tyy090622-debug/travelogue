@@ -1,0 +1,32 @@
+@import './interaction-base.css';
+
+.paper-int-content {
+  position: absolute;
+  left: 100px;
+  top: 0cm;
+  width: 322px;
+  z-index: 9;
+}
+
+.paper-int-img {
+  position: absolute;
+  left: 20;
+  top: 0;
+  width: 240px;
+  height: 427px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.paper-int-text {
+  position: absolute;
+  left: -7px;
+  top: 200px;
+  width: 230px;
+  font-family: 'ZhaohuaMinA', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  line-height: normal;
+  pointer-events: none;
+}
