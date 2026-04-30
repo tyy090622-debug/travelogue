@@ -15,13 +15,6 @@
   font-display: swap;
 }
 
-/* 全局重置 */
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* ========== 主容器 ========== */
 .scene2 {
   position: relative;

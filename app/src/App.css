@@ -1,10 +1,1 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  overflow: hidden;
-  background: #000;
-}
+/* App-level styles — global resets handled by index.css */

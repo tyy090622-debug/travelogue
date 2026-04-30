@@ -3,14 +3,14 @@
 .paper-int-content {
   position: absolute;
   left: 100px;
-  top: 0cm;
+  top: 0;
   width: 322px;
   z-index: 9;
 }
 
 .paper-int-img {
   position: absolute;
-  left: 20;
+  left: 20px;
   top: 0;
   width: 240px;
   height: 427px;
