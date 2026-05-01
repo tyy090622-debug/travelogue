@@ -222,6 +222,7 @@
   left: 7px;
   overflow: hidden;
   cursor: pointer;
+  z-index: 2;
 }
 
 .polaroid-1-base {
@@ -251,13 +252,14 @@
 
 /* ========== 拍立得2 (v2_23) ========== */
 .scene2__polaroid-2 {
-  width: 190px;
-  height: 253px;
+  width: 200px;
+  height: 260px;
   position: absolute;
   top: 430px;
-  left: 7px;
+  left: 10px;
   overflow: hidden;
   cursor: pointer;
+  z-index: 1;
 }
 
 .polaroid-2-img {
