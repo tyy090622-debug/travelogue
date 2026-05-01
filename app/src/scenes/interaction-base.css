@@ -27,6 +27,7 @@
   left: 0px;
   object-fit: cover;
   pointer-events: none;
+  z-index: 3;
 }
 
 .int-disperse {
@@ -35,9 +36,9 @@
   height: 852px;
   top: 0;
   left: 0;
-  object-fit: fill;
+  object-fit: contain;
   pointer-events: none;
-  z-index: 5;
+  z-index: 2;
 }
 
 .int-white-paper {
