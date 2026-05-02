@@ -106,9 +106,6 @@ export default function Polaroid2Interaction({ onBack, onPostcard, polaroid2Imag
         <div className="p2-scene-rect" style={{ backgroundImage: `url(${polaroidSrc})` }} />
       )}
 
-      {/* 噪点动画层 */}
-      <div className="p2-noise-overlay" />
-
       {/* 白色矩形 5:4 */}
       <div
         className={`p2-white-box ${(showText1 || phase === 'text3') ? 'p2-white-box--text' : ''} ${phase === 'text3' ? 'p2-white-box--tall' : ''}`}
@@ -165,6 +162,7 @@ export default function Polaroid2Interaction({ onBack, onPostcard, polaroid2Imag
       {/* 相机 + 拍立得底图 */}
       <div className="p2-media-group">
         <img className="p2-camera" src="./images/相机.png" alt="" />
+        <div className="p2-noise-overlay" />
         <div className="p2-polaroid-wrap" onClick={handleCameraClick}>
           <div className="p2-polaroid-bg" style={{ backgroundImage: `url(${polaroidSrc})` }} />
           <div className="p2-polaroid-photo">

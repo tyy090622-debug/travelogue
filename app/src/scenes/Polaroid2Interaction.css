@@ -25,10 +25,10 @@
 .p2-noise-overlay {
   position: absolute;
   left: 2px;
-  top: 250px;
+  top: 270px;
   width: 260px;
   height: 325px;
-  z-index: 4;
+  z-index: 5;
   pointer-events: none;
   filter: url(#noise-filter);
 }
@@ -67,7 +67,7 @@
   top: 300px;
   width: 500px;
   transform: rotate(90deg);
-  z-index: 5;
+  z-index: 6;
   pointer-events: none;
 }
 
