@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { createPortal } from 'react-dom'
 import './EditScene.css'
 import CropModal from '../components/CropModal'
 
@@ -56,7 +57,7 @@ function ImgUpload({ label, value, onChange, cropW = 250, cropH = 250, resizeTo 
       </div>
       {isDataUrl && <div className="edit-img-upload-tag">已上传</div>}
 
-      {showCrop && (
+      {showCrop && createPortal(
         <CropModal
           cropW={cropW}
           cropH={cropH}
@@ -66,7 +67,8 @@ function ImgUpload({ label, value, onChange, cropW = 250, cropH = 250, resizeTo 
             setShowCrop(false)
           }}
           onCancel={() => setShowCrop(false)}
-        />
+        />,
+        document.querySelector('.edit-portal-root')
       )}
     </label>
   )
@@ -173,6 +175,8 @@ export default function EditScene({ onBack, contentData, onSave }) {
 
         <div className="edit-save-btn" onClick={handleSave}>保存修改</div>
       </div>
+
+      <div className="edit-portal-root" />
 
       <div className="int-back" onClick={onBack}>
         <img className="int-back-img" src="./images/便签.png" alt="" />

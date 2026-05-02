@@ -183,3 +183,14 @@
 .edit-save-btn:hover {
   background: #2a6570;
 }
+
+/* ===== Portal root for CropModal ===== */
+.edit-portal-root {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+.edit-portal-root > * {
+  pointer-events: auto;
+}

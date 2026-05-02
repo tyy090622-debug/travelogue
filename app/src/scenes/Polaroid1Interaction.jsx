@@ -241,7 +241,7 @@ export default function Polaroid1Interaction({ onBack, onPolaroid2, chartResults
         {stage === 'open' && (
           <rect
             className="p1-drag-handle"
-            x="300" y="640" width="50" height="150"
+            x="280" y="600" width="80" height="180"
             fill="transparent"
             onMouseDown={onDragStart}
             onTouchStart={onDragStart}
