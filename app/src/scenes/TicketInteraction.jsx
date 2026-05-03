@@ -58,7 +58,7 @@ export default function TicketInteraction({ onBack, onChartUpdate, personaImage,
   const [energy, setEnergy] = useState({ y0: 15, y6: 80, y12: 50, y18: 20, y24: 15 })
   const [dragDot, setDragDot] = useState(null)
   const energySvgRef = useRef(null)
-  const [axisValue, setAxisValue] = useState(0)
+  const [axisValues, setAxisValues] = useState({ 1: 0, 2: 0, 3: 0, 4: 0 })
   const [axisDragging, setAxisDragging] = useState(false)
   const trackRef = useRef(null)
 
@@ -190,8 +190,8 @@ export default function TicketInteraction({ onBack, onChartUpdate, personaImage,
     if (!trackRef.current) return
     const rect = trackRef.current.getBoundingClientRect()
     const x = ((e.clientX - rect.left) / rect.width) * 8 - 4
-    setAxisValue(Math.round(Math.max(-4, Math.min(4, x))))
-  }, [])
+    setAxisValues(prev => ({ ...prev, [page]: Math.round(Math.max(-4, Math.min(4, x))) }))
+  }, [page])
 
   const handleTrackDown = (e) => {
     setAxisDragging(true)
@@ -240,7 +240,7 @@ export default function TicketInteraction({ onBack, onChartUpdate, personaImage,
           <div className="chart-axis-line" />
           <div className="chart-axis-zero-mark" />
           <span className="chart-axis-zero">0</span>
-          <div className="chart-axis-dot" style={{ left: `${((axisValue + 4) / 8) * 100}%` }} />
+          <div className="chart-axis-dot" style={{ left: `${(((axisValues[page] ?? 0) + 4) / 8) * 100}%` }} />
         </div>
         <div className="chart-axis-labels">
           <span className="chart-axis-label">{curAxis.left}</span>

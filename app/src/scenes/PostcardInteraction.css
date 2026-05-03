@@ -100,8 +100,8 @@
   top: 18px;
   width: 215px;
   height: 200px;
-  border: 2px solid #0011ff;
-  background: rgba(0, 17, 255, 0.08);
+  border: 1px solid #000;
+  background: rgba(0, 0, 0, 0.06);
   overflow: hidden;
 }
 .pc-rect1 {
